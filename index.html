@@ -15,12 +15,115 @@
       rel="stylesheet"
     />
     <title>Final UCP</title>
+    <style>
+      .video-container {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .video-container video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: translate(-50%, -50%);
+      }
+
+      .video-container .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+      }
+
+      .video-container .header-content {
+        position: absolute;
+        padding: 20px; 
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+      }
+
+      .video-container .header-content h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+      }
+
+      .video-container .header-content .btn {
+        padding: 10px 20px;
+        background-color: #ff9900;
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        border-radius: 15px;
+      }
+
+      .card-table {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        background-color: #f1f1f1;
+        border-radius: 10px;
+        overflow: hidden;
+        width: 300px; 
+        margin: 20px 60px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .card img {
+        width: 100%;
+        height: 200px; 
+        object-fit: cover;
+      }
+
+      .card p {
+        padding: 15px;
+        background-color: #e0e0e0;
+        margin: 0;
+        font-size: 14px;
+        text-align: justify; 
+      }
+      .contact-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 20px;
+        background-color: black;
+        color: white;
+        text-decoration: none;
+        border-radius: 20px;
+        font-size: 16px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+
+.contact-btn i {
+  margin-left: 10px;
+  color: #ff0000;
+}
+
+.contact-btn:hover {
+  background-color: #333;
+}
+    </style>
   </head>
 
   <body>
     <nav>
       <div class="logo">
-        <a href="index.html"><img src="logo.png" alt="Logo" /></a>
+        <a href="index.html"><img src="img/logo.png" alt="Logo" /></a>
       </div>
       <div class="nav-links">
         <a href="index.html">Home</a>
@@ -28,11 +131,86 @@
         <a href="contact.html">Contact</a>
       </div>
     </nav>
+    <main>
+      <section>
+        <article>
+          <section>
+            <div class="video-container" id="home">
+              <video autoplay loop muted>
+                <source src="video/Video.mp4" type="video/mp4" />
+              </video>
+              <div class="overlay"></div>
+              <div class="header-content text-center text-white">
+                <h1 style="color: #ff9900">
+                  Community Building & Branding melalui Board Game Kustom
+                </h1>
+                <p>
+                  Kami mengkhususkan diri dalam membantu perusahaan dan komunitas
+                  memperkuat ikatan dan meningkatkan keterlibatan melalui board game
+                  kustom. Kami menawarkan solusi unik yang menggabungkan elemen
+                  permainan dengan strategi promosi dan branding, menciptakan pengalaman
+                  interaktif yang mendalam bagi pengguna.
+                </p>
+                <a href="about.html" class="btn btn-warning mt-3">Learn More</a>
+              </div>
+            </div>
+          </section>
+        </article>
+
+        <article>
+          <div style="display: flex; margin-bottom: 20px;">
+            <figure style="margin: 75px;">
+              <img src="https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,w_1000/stock/custom%20stock/2022-11-custom-stock/games-0228-edit" alt="Image 1" style="width: 800px; height: px;" />
+            </figure>
+            <section style="margin-top: 60px; margin-right: 400px;" >
+              <h2>Board Games</h2>
+              <p style="text-align: justify;">Board game adalah jenis permainan di
+                mana alat-alat atau bagian-bagian permainan yang dapat
+                 ditempatkan, dipindahkan,
+                atau digerakkan pada permukaan yang telah ditandai atau dibagi-bagi
+                menurut seperangkat aturan. 
+                <br>
+                <br>Permainan mungkin didasarkan pada strategi
+                murni, kesempatan, atau campuran dari keduanya dan biasanya memiliki
+                tujuan yang harus dicapai. </p>
+            </section>
+          </div>
+        </article>
+
+        <article style="background-color: #333;">
+          <h2 style="text-align: center; color: white; padding-top: 45px;">Manfaat Board Game</h2>
+          <div class="card-table">
+            <div class="card">
+              <img src="https://static.republika.co.id/uploads/images/inpicture_slide/salah-satu-jenis-permainan-papan-atau-board-game-_160317092429-151.jpg" alt="MAIN GAME" />
+              <p>Tahukah kamu bahwa bermain board games bukan hanya seru dan menyenangkan, tapi juga memiliki banyak manfaat?</p>
+            </div>
+            <div class="card">
+              <img src="https://asset-a.grid.id//crop/0x0:0x0/360x240/photo/2020/04/12/2901223465.jpg" alt="MASAK" />
+              <p>Meningkatkan endorfin dalam tubuh, yang dapat meningkatkan perasaan bahagia</p>
+            </div>
+            <div class="card">
+              <img src="https://cdn.idntimes.com/content-images/community/2023/11/6-31a2fb4deaf7022e16e98031871f4eff-3ebf8b333ce7a6f26d44aea0d8bd5169.jpg" alt="MAKAN" />
+              <p>Bermain board game dapat menjadi waktu berkumpul keluarga yang menyenangkan dan memperkuat ikatan keluarga</p>
+            </div>
+          </div>
+        </article>
+        <section style="text-align: center; margin: 75px;">
+          <h2>Bangun Ikatan Team Anda dengan Baik & Scale Up Bisnis Anda dengan Branding</h2>
+          <p>Hubungi kami sekarang untuk konsultasi gratis dan temukan bagaimana solusi board game kustom kami dapat memperkuat ikatan tim Anda dan meningkatkan branding bisnis Anda!</p>
+          <a href="contact.html" class="contact-btn">
+            Hubungi Kami <i class="fas fa-phone"></i>
+          </a>
+        </section>        
+        <article>
+          
+        </article>
+      </section>
+    </main>
 
     <footer class="footer" id="footer">
       <div class="container-footer">
         <div class="footer-logo">
-          <img src="logo.png" alt="Logo" />
+          <img src="img/logo.png" alt="Logo" />
         </div>
         <div class="footer-links">
           <ul>
@@ -44,16 +222,13 @@
         <div class="footer-contact">
           <ul>
             <li>
-              <a href="mailto:youremail@example.com">uyauyapo@gmail.com</a>
+              <a href="mailto:jodinurfarkhani04@gmail.com">jodinurfarkhani04@gmail.com</a>
             </li>
-            <li><a href="https://wa.me/yourphonenumber">+6285600625975</a></li>
+            <li><a href="https://wa.me/6285600625875">+6285600625875</a></li>
           </ul>
           <div class="social-icons">
             <a href="https://www.instagram.com/jodinrf/?hl=en"
               ><i class="fab fa-instagram"></i
-            ></a>
-            <a href="https://www.linkedin.com/in/jodi-nur-farkhani-04845725b/"
-              ><i class="fab fa-linkedin"></i
             ></a>
             <a href="https://github.com/Jodinurf"
               ><i class="fab fa-github"></i
