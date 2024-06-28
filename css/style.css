@@ -19,7 +19,7 @@ nav {
     justify-content: center;
     align-items: center;
     padding: 40px;
-    background-color: #1a2726; /* Make the background transparent */
+    background-color: #1a2726; 
     color: aliceblue;
     position: sticky;
     top: 0;
@@ -37,7 +37,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #a2d5d1; /* Warna saat dihover */
+    color: #ff9900; 
 }
 
 
@@ -45,7 +45,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #213533;
+    background-color: #1a2726;
     color: #90A4AE;
     padding: 20px;
     text-align: center;
@@ -102,14 +102,22 @@ nav {
     margin-bottom: 5px; 
 }
 
-.footer-links a,
+.footer-links a{
+    margin: 0 20px; /* Sesuaikan margin */
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 20px;
+}
 .footer-contact a {
     color: #90A4AE;
     text-decoration: none;
     text-align: left;
 }
 
-.footer-links a:hover,
+.footer-links a:hover{
+    color: #ff9900;
+}
+
 .footer-contact a:hover {
     color: #fc2a05;
 }
