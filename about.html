@@ -3,196 +3,274 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Final UCP</title>
+    <link rel="icon" href="img/logo.png" type="image/png" sizes="32x32" />
+
+    <title>About Us</title>
     <style>
-      body {
-          font-family: Arial, sans-serif;
-      }
+        body {
+            font-family: Arial, sans-serif;
+        }
 
-      .navbar {
-          position: sticky;
-          top: 0;
-          z-index: 1000;
-      }
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-      .navbar-nav {
-          margin: 0 auto;
-      }
+        .navbar-nav {
+            margin: 0 auto;
+        }
 
-      .jumbotron {
-          background-image: url('');
-          background-size: cover;
-          color: white;
-          text-align: center;
-          padding-top: 30px;
-          background-color: aqua;
-          
-      }
+        .jumbotron {
+            background-image: url('img/about-bg.jpg');
+            background-size: cover;
+            color: rgb(0, 58, 11);
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+            width: auto;
+            padding-top: 30px;
+            /*background-color: aqua;*/
+        }
 
-      .card {
-          cursor: pointer;
-          text-align: center;
-          padding-top: 50px;
+        .card {
+            cursor: pointer;
+            text-align: center;
+            padding-top: 50px;
+            
+        }
 
-      }
+        .card-img-top {
+            width: 400px;
+            height: 400px;
+            border-radius: 5%;
+        }
 
-      footer {
-          background-color: #f8f9fa;
-          padding: 20px 0;
-          margin-top: 50px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-      }
+        footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-      footer .nav-links {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-      }
+        footer .nav-links {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
 
-      footer .contact-info {
-          display: flex;
-          align-items: center;
-      }
+        footer .contact-info {
+            display: flex;
+            align-items: center;
+        }
 
-      footer a {
-          margin: 0 10px;
-          color: #000;
-      }
+        footer a {
+            margin: 0 10px;
+            color: #000;
+        }
 
-      footer a:hover {
-          text-decoration: none;
-      }
+        footer a:hover {
+            text-decoration: none;
+        }
 
-      .grid-container {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr); /* Tiga kolom horizontal */
-          gap: 20px;
-      }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Tiga kolom horizontal */
+            gap: 20px;
+        }
 
-      @media (max-width: 768px) {
-          .grid-container {
-              grid-template-columns: repeat(2, 1fr); /* Dua kolom vertikal pada layar kecil */
-          }
-      }
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr); /* Dua kolom vertikal pada layar kecil */
+            }
+        }
 
-      .text-right {
-          text-align: right;
-      }
-  </style>
+        .text-right {
+            text-align: right;
+        }
+
+        .option {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .option-item {
+            flex: 1;
+            margin: 0 10px;
+            text-align: left;
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center;
+        }
+
+        .option-item img {
+            width: 50px; 
+            height: auto; 
+        }
+
+        @media (max-width: 768px) {
+            .option {
+                flex-direction: column;
+                align-items: center;
+            }
+            .option-item {
+                margin: 10px 0;
+            }
+        }
+
+        #option2 {
+            margin-top: 20px; 
+        }
+
+        #about {
+        margin: 20px; 
+        padding: 20px;
+        }
+
+        .option {
+            margin: 20px;
+            padding: 20px;
+        }
+        
+        
+    </style>
 </head>
 
 <body>
-  <nav>
-      <div class="logo">
-          <a href="index.html"><img src="img/logo.png" alt="Logo" /></a>
-      </div>
-      <div class="nav-links">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-      </div>
-  </nav>
-  
-  <div class="container mt-5">
-      <div class="jumbotron">
-          <h1 class="display-4">Lorem Ipsum</h1>
-      </div>
-
-      <div class="grid-container">
-          <div class="col-md-4" onclick="showModal('Product 1', 'Description of product 1', '123.png')">
-              <div class="card">
-                  <img src="https://inc.mizanstore.com/aassets/img/com_cart/produk/board-game-traveler.jpg" class="card-img-top" alt="Product 1">
-                  <div class="card-body">
-                      <p class="card-text">Manusia Setengah Hewan</p>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-4" onclick="showModal('Product 2', 'Description of product 2', 'placeholder.jpg')">
-              <div class="card">
-                  <img src="https://inc.mizanstore.com/aassets/img/com_cart/produk/board-game-traveler.jpg" class="card-img-top" alt="Product 2">
-                  <div class="card-body">
-                      <p class="card-text">Manusia Setengah Hewan</p>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-4" onclick="showModal('Product 3', 'Description of product 3', 'placeholder.jpg')">
-              <div class="card">
-                  <img src="https://inc.mizanstore.com/aassets/img/com_cart/produk/board-game-traveler.jpg" class="card-img-top" alt="Product 3">
-                  <div class="card-body">
-                      <p class="card-text">Manusia Setengah Hewan</p>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-4" onclick="showModal('Product 4', 'Description of product 4', 'placeholder.jpg')">
-              <div class="card">
-                  <img src="https://inc.mizanstore.com/aassets/img/com_cart/produk/board-game-traveler.jpg" class="card-img-top" alt="Product 4">
-                  <div class="card-body">
-                      <p class="card-text">Manusia Setengah Hewan</p>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-4" onclick="showModal('Product 5', 'Description of product 5', 'placeholder.jpg')">
-              <div class="card">
-                  <img src="https://inc.mizanstore.com/aassets/img/com_cart/produk/board-game-traveler.jpg" class="card-img-top" alt="Product 5">
-                  <div class="card-body">
-                      <p class="card-text">Manusia Setengah Hewan</p>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-4" onclick="showModal('Product 6', 'Description of product 6', 'placeholder.jpg')">
-              <div class="card">
-                  <img src="https://inc.mizanstore.com/aassets/img/com_cart/produk/board-game-traveler.jpg" class="card-img-top" alt="Product 6">
-                  <div class="card-body">
-                      <p class="card-text">Manusia Setengah Hewan</p>
-                  </div>
-              </div>
-          </div>
-          <!-- Tambahkan lebih banyak kartu produk sesuai kebutuhan -->
-      </div>
-  </div>
-
-  <footer class="footer" id="footer">
-    <div class="container-footer">
-      <div class="footer-logo">
-        <img src="img/logo.png" alt="Logo" />
-      </div>
-      <div class="footer-links">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-contact">
-        <ul>
-          <li>
-            <a href="mailto:youremail@example.com">baihaqifikri203@gmail.com</a>
-          </li>
-          <li><a href="https://wa.me/yourphonenumber">+6285159325570</a></li>
-        </ul>
-        <div class="social-icons">
-          <a href="https://www.instagram.com/jodinrf/?hl=en"
-            ><i class="fab fa-instagram"></i
-          ></a>
-          <a href="https://www.linkedin.com/in/jodi-nur-farkhani-04845725b/"
-            ><i class="fab fa-linkedin"></i
-          ></a>
-          <a href="https://github.com/Jodinurf"
-            ><i class="fab fa-github"></i
-          ></a>
-          <a
-          ></a>
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="Logo" /></a>
         </div>
-      </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="jumbotron">
+            <h1 class="display-4">Tentang Kami</h1>
+        </div>
+
+        <div class="grid-container">
+            <div class="col-md-4" onclick="showModal('Kepala Dokter', 'Sipaling Ngatur', 'https://akcdn.detik.net.id/community/media/visual/2017/08/04/674cc990-55ab-4811-aec4-c49f42171410_916.jpg?w=770&q=90')">
+                <div class="card">
+                    <img src="https://akcdn.detik.net.id/community/media/visual/2017/08/04/674cc990-55ab-4811-aec4-c49f42171410_916.jpg?w=770&q=90" class="card-img-top" alt="Product 1">
+                    <div class="card-body">
+                        <p class="card-text">Dokter Siti Maymunah</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" onclick="showModal('Kepala Satpam', 'Sipaling Kuat', 'https://mtstribaktiajung.wordpress.com/wp-content/uploads/2012/11/satpam.jpg?w=891')">
+                <div class="card">
+                    <img src="https://mtstribaktiajung.wordpress.com/wp-content/uploads/2012/11/satpam.jpg?w=891" class="card-img-top" alt="Product 2">
+                    <div class="card-body">
+                        <p class="card-text">Satpam Sutarman</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" onclick="showModal('Kepala Bedah', 'Sipaling Berani', 'https://png.pngtree.com/background/20211215/original/pngtree-male-doctor-wearing-a-white-coat-in-the-daytime-picture-image_1481543.jpg')">
+                <div class="card">
+                    <img src="https://png.pngtree.com/background/20211215/original/pngtree-male-doctor-wearing-a-white-coat-in-the-daytime-picture-image_1481543.jpg" class="card-img-top" alt="Product 3">
+                    <div class="card-body">
+                        <p class="card-text">Dokter Lee</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" onclick="showModal('Kepala Penyakit Jiwa', 'Sipaling Waras', 'https://st.depositphotos.com/1177973/3331/i/950/depositphotos_33315093-stock-photo-portrait-of-doctor-isolated-on.jpg')">
+                <div class="card">
+                    <img src="https://st.depositphotos.com/1177973/3331/i/950/depositphotos_33315093-stock-photo-portrait-of-doctor-isolated-on.jpg" class="card-img-top" alt="Product 4">
+                    <div class="card-body">
+                        <p class="card-text">Dokter Max</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" onclick="showModal('Kepala Obat', 'Sipaling Hafal', 'https://st2.depositphotos.com/1010683/5791/i/950/depositphotos_57918289-stock-photo-male-doctor-with-arms-crossed.jpg')">
+                <div class="card">
+                    <img src="https://st2.depositphotos.com/1010683/5791/i/950/depositphotos_57918289-stock-photo-male-doctor-with-arms-crossed.jpg" class="card-img-top" alt="Product 5">
+                    <div class="card-body">
+                        <p class="card-text">Dokter Jack</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" onclick="showModal('Kepala Syaraf', 'Sipaling Detail', 'https://st2.depositphotos.com/1017228/8355/i/950/depositphotos_83551080-stock-photo-male-doctor-standing-with-arms.jpg')">
+                <div class="card">
+                    <img src="https://st2.depositphotos.com/1017228/8355/i/950/depositphotos_83551080-stock-photo-male-doctor-standing-with-arms.jpg" class="card-img-top" alt="Product 6">
+                    <div class="card-body">
+                        <p class="card-text">Dokter Peter</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Tambahkan lebih banyak kartu produk sesuai kebutuhan -->
+        </div>
     </div>
-  </footer>
+
+    <section id="about">
+        <div>
+            <h2>Pengembangan Desain Web Kelompok 2</h2>
+            <p>Website informasi kesehatan adalah sumber daya online yang menyediakan informasi, saran, dan berita terkini seputar kesehatan. Mereka bisa berfokus pada berbagai aspek kesehatan, mulai dari informasi medis, gaya hidup sehat, tips diet, hingga berita terbaru tentang perkembangan medis</p>
+        </div>
+    </section>
+
+    <section class="option">
+        <div class="option-item">
+            <i class="fas fa-thermometer"></i>
+            <h1>Termometer</h1>
+            <p>Termometer atau disebut juga pengukur suhu adalah alat yang digunakan untuk mengukur suhu (temperature). Istilah termometer berasal dari bahasa Latin thermo yang berarti panas dan meter yang berarti untuk mengukur.</p>
+            <i class="fas fa-stethoscope"></i>
+            <h1>Stetoskop</h1>
+            <p>Stetoskop adalah sebuah alat medis akustik untuk memeriksa suara dalam tubuh. Alat ini banyak digunakan untuk mendengar suara jantung dan pernafasan serta aliran darah dalam arteri dan vena. Alat ini juga digunakan oleh mekanik untuk mengisolasi suara tertentu dari mesin untuk diagnosis.</p>
+        </div>
+        <div class="option-item">
+            <i class="fas fa-pills"></i>
+            <h1>Obat</h1>
+            <p>Obat adalah bahan atau paduan bahan, termasuk produk biologi yang digunakan untuk mempengaruhi atau menyelidiki sistem fisiologi atau keadaan patologi dalam rangka penetapan diagnosis, pencegahan, penyembuhan, pemulihan, peningkatan kesehatan dan kontrasepsi, untuk manusia.</p>
+            <i class="fas fa-syringe"></i>
+            <h1>Tensimeter Digital</h1>
+            <p>Alat tensimeter digital merupakan sarana pengukur tekanan darah yang direkomendasikan untuk pelaksanaan kegiatan kunjungan rumah petugas dalam rangka pelaksanaan PISPK. Keunggulan alat ini adalah mudah dan memiliki tingkat sensitivitas yang cukup tinggi.</p>
+        </div>
+        <div class="image">
+            <img src="img/hart.png" alt="">
+        </div>
+    </section>
+
+    <footer class="footer" id="footer">
+        <div class="container-footer">
+            <div class="footer-logo">
+                <img src="img/logo.png" alt="Logo" />
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <ul>
+                    <li>
+                        <a href="mailto:youremail@example.com">baihaqifikri203@gmail.com</a>
+                    </li>
+                    <li><a href="https://wa.me/yourphonenumber">+6285159325570</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/jodinrf/?hl=en"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/jodi-nur-farkhani-04845725b/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Jodinurf"><i class="fab fa-github"></i></a>
+                    <a></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
@@ -211,6 +289,5 @@
             });
         }
     </script>
-    
-  </body>
+</body>
 </html>

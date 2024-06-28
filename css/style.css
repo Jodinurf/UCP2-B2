@@ -37,7 +37,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #ff9900; 
+    color:rgb(0, 187, 255);
 }
 
 
@@ -115,7 +115,7 @@ nav {
 }
 
 .footer-links a:hover{
-    color: #ff9900;
+    color: rgb(0, 187, 255);
 }
 
 .footer-contact a:hover {
