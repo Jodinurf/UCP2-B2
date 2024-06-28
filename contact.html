@@ -1,178 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <title>Final UCP</title>
-    <style>
-        body {
-        margin: 0;
-        font-family: 'Merriweather', serif;
-        background-color: #f0f0f0; /* Light gray background */
-        }
-        .container {
-            text-align: center;
-            padding: 50px;
-        }
-        .header {
-            background: url('background.jpg') no-repeat center center/cover;
-            padding: 100px 20px;
-            color: white;
-        }
-        .form-container {
-            background-color: #d0c4c4;
-            padding: 30px;
-            margin: 20px auto;
-            width: 50%;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            background-image: url('background.jpg'); /* Ganti dengan path gambar latar belakang yang sesuai */
-            background-size: cover;
-            background-position: center;
-            color: white; /* Warna teks di sesuaikan dengan kebutuhan */
-        }
-        .form-container input,
-        .form-container textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-        }
-        .form-container button {
-            padding: 10px 20px;
-            background-color: #1e7121;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 10px;
-        }
-        .form-container button:hover {
-            background-color: #1a2726;
-        }
-        .contact-info-container {
-          display: flex;
-          background-color: rgb(194, 215, 237);
-          justify-content: space-between;
-          align-items: flex-start;
-          padding: 20px;
-          background-image: url('background.jpg'); /* Ganti dengan path gambar latar belakang yang sesuai */
-          background-size: cover;
-          background-position: center;
-          color: rgb(19, 18, 18); /* Warna teks di sesuaikan dengan kebutuhan */
-        }
-        .contact-info {
-            width: 45%;
-            text-align: left;
-        }
-        .contact-info h2 {
-            margin-top: 0;
-        }
-        .contact-info p {
-            margin: 5px 0;
-        }
-        .map-container {
-            width: 45%;
-            height: 400px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <title>Final UCP</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Merriweather', serif;
+      background-color: #f0f0f0;
+      /* Light gray background */
+    }
+
+    .container {
+      text-align: center;
+      padding: 50px;
+    }
+
+    .header {
+      background: url('background.jpg') no-repeat center center/cover;
+      padding: 100px 20px;
+      color: white;
+    }
+
+    .form-container {
+      background-color: #4e4e4e;
+      /* Warna latar belakang yang lebih gelap */
+      padding: 30px;
+      margin: 20px auto;
+      width: 80%;
+      /* Ubah lebar form sesuai kebutuhan */
+      max-width: 600px;
+      /* Maksimum lebar form */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      color: #ffffff;
+      /* Warna teks di sesuaikan dengan kebutuhan */
+    }
+
+    .form-container input,
+    .form-container textarea {
+      width: calc(100% - 22px);
+      /* Mengurangi padding dan border dari lebar total */
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #999999;
+      border-radius: 5px;
+      background-color: #333333;
+      /* Warna latar belakang input */
+      color: #ffffff;
+      /* Warna teks di dalam input */
+      font-size: 16px;
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .form-container button {
+      padding: 12px 24px;
+      background-color: #ff9900;
+      /* Warna latar belakang tombol yang mencolok */
+      color: #ffffff;
+      /* Warna teks tombol */
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-container button:hover {
+      background-color: #e68a00;
+      /* Warna latar belakang tombol saat dihover */
+    }
+
+    .contact-info-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 20px;
+      background-color: #f0f0f0;
+      /* Background color for the entire contact info section */
+    }
+
+    .contact-info {
+      width: 45%;
+      /* Adjust width as needed */
+      padding: 0 20px; /* Add padding for spacing */
+    }
+
+    .contact-info h2 {
+      font-size: 24px;
+      /* Larger font size for headings */
+      margin-top: 0;
+      color: #333333; /* Darker color for headings */
+    }
+
+    .contact-info p {
+      font-size: 16px;
+      /* Adjust font size */
+      color: #666666; /* Dark gray color for text */
+      line-height: 1.6; /* Improved line spacing */
+    }
+
+    .contact-info a {
+      color: #ff9900;
+      /* Link color */
+      text-decoration: none;
+      /* Remove underline */
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+      /* Underline on hover */
+    }
+
+    .map-container {
+      width: 45%;
+      height: 400px;
+      /* Adjust height as needed */
+    }
+  </style>
 </head>
 
 <body>
-    <nav>
-      <div class="logo">
-        <a href="index.html"><img src="img/logo.png" alt="Logo" /></a>
-      </div>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </nav>
-
-    <div class="container">
-        <h1>Contact Us</h1>
-        <p style="font-size: larger;">Terimakasih telah mengunjungi website kami.
-          <br>Apabila terdapat keluh kesah terkait layanan kami,
-          silahkan kirim pesan melalui form berikut:
-        </p>
-
-        <!-- Form Section -->
-        <div class="form-container">
-            <form id="contactForm">
-                <input type="text" id="name" name="name" placeholder="Nama" required>
-                <input type="email" id="email" name="email" placeholder="Email" required>
-                <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                <textarea id="message" name="message" placeholder="Pesan" required></textarea>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-
-        <!-- Contact Info Section -->
-        <div class="contact-info-container">
-            <div class="contact-info">
-                <h2>Hubungi Kami secara Langsung</h2>
-                <p style="font-size: larger;">
-                    Kantor Kami:
-                    <br>Jl. Brawijaya, Geblagan, Tamantirto, Kec. Kasihan, Kabupaten Bantul, Daerah Istimewa Yogyakarta 55183.
-                    <br>
-                    <br>Atau Anda bisa menghubungi kami langsung melalui:
-                </p>
-                <p><strong>Phone:</strong> <a href="https://wa.me/6285600625875">+6285600625875</a></p>
-                <p><strong>Email:</strong> <a href="mailto:jodinurfarkhani04@gmail.com">jodinurfarkhani04@gmail.com</a></p>
-            </div>
-            <div class="map-container">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.801525468704!2d110.32186090000002!3d-7.810823499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7af80f28426fb3%3A0x72412294845ee8b4!2sMuhammadiyah%20University%20of%20Yogyakarta!5e0!3m2!1sen!2sid!4v1719435310657!5m2!1sen!2sid"
-                    width="100%" height="75%" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
+  <nav>
+    <div class="logo">
+      <a href="index.html"><img src="img/logo.png" alt="Logo" /></a>
     </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
 
-    <footer class="footer" id="footer">
-      <div class="container-footer">
-        <div class="footer-logo">
-          <img src="img/logo.png" alt="Logo" />
-        </div>
-        <div class="footer-links">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-contact">
-          <ul>
-            <li>
-              <a href="mailto:jodinurfarkhani04@gmail.com">jodinurfarkhani04@gmail.com</a>
-            </li>
-            <li><a href="https://wa.me/6285600625875">+6285600625875</a></li>
-          </ul>
-          <div class="social-icons">
-            <a href="https://www.instagram.com/jodinrf/?hl=en"
-              ><i class="fab fa-instagram"></i
-            ></a>
-            <a href="https://github.com/Jodinurf"
-              ><i class="fab fa-github"></i
-            ></a>
-            <a
-              href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRpccgmkCPFcTFTlNltclzpdDSRZqCnxrGBwvPrwfxjvcFwgJBpjpgrsRWNLPkXKDCKBsCl"
-              ><i class="fab fa-google"></i
-            ></a>
-          </div>
+  <article>
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p style="font-size: larger;">Terimakasih telah mengunjungi website kami.
+        <br>Apabila terdapat keluh kesah terkait layanan kami,
+        silahkan kirim pesan melalui form berikut:
+      </p>
+      <div class="form-container">
+        <form id="contactForm">
+          <input type="text" id="name" name="name" placeholder="Nama" required>
+          <input type="email" id="email" name="email" placeholder="Email" required>
+          <input type="text" id="subject" name="subject" placeholder="Subject" required>
+          <textarea id="message" name="message" placeholder="Pesan" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+  </article>
+
+  <div class="contact-info-container">
+    <div class="contact-info">
+      <h2>Hubungi Kami secara Langsung</h2>
+      <p>
+        Kantor Kami:<br>
+        Jl. Brawijaya, Geblagan, Tamantirto, Kec. Kasihan, Kabupaten Bantul, Daerah Istimewa Yogyakarta 55183.
+        <br><br>
+        Atau Anda bisa menghubungi kami langsung melalui:
+      </p>
+      <p><strong>Phone:</strong> <a href="https://wa.me/6285600625875">+6285600625875</a></p>
+      <p><strong>Email:</strong> <a href="mailto:jodinurfarkhani04@gmail.com">jodinurfarkhani04@gmail.com</a></p>
+    </div>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.801525468704!2d110.32186090000002!3d-7.810823499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7af80f28426fb3%3A0x72412294845ee8b4!2sMuhammadiyah%20University%20of%20Yogyakarta!5e0!3m2!1sen!2sid!4v1719435310657!5m2!1sen!2sid"
+        width="100%" height="100%" style="border: 0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+
+  <footer class="footer" id="footer">
+    <div class="container-footer">
+      <div class="footer-logo">
+        <img src="img/logo.png" alt="Logo" />
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <ul>
+          <li>
+            <a href="mailto:jodinurfarkhani04@gmail.com">jodinurfarkhani04@gmail.com</a>
+          </li>
+          <li><a href="https://wa.me/6285600625875">+6285600625875</a></li>
+        </ul>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/jodinrf/?hl=en"><i class="fab fa-instagram"></i></a>
+          <a href="https://github.com/Jodinurf"><i class="fab fa-github"></i></a>
+          <a
+            href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRpccgmkCPFcTFTlNltclzpdDSRZqCnxrGBwvPrwfxjvcFwgJBpjpgrsRWNLPkXKDCKBsCl"><i
+              class="fab fa-google"></i></a>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <script src="js/sweetAlert.js"> </script>
+  <script src="js/sweetAlert.js"> </script>
 </body>
+
 </html>
